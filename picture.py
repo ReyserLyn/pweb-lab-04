@@ -34,7 +34,11 @@ class Picture:
     def up(self, p):
         """ Devuelve una nueva figura poniendo la figura p encima de la
             figura actual """
-        return Picture(p.img + self.img)
+        new_img = []
+        for row1, row2 in zip(self.img, p.img):
+            new_row = [pixel2 if pixel1 == ' ' else pixel1 for pixel1, pixel2 in zip(row1, row2)]
+            new_img.append(new_row)
+        return Picture(new_img)
 
     def under(self, p):
         """ Devuelve una nueva figura poniendo la figura p debajo de la
