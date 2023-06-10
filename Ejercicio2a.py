@@ -4,6 +4,6 @@ from chessPictures import *
 caballoBlanco = knight
 caballoNegro = knight.negative()
 
-tablero = caballoBlanco.join(caballoNegro).up(caballoNegro.join(caballoBlanco))
+tablero = caballoBlanco.join(caballoNegro).under(caballoNegro.join(caballoBlanco))
 
 draw(tablero)
