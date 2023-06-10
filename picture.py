@@ -29,6 +29,8 @@ class Picture:
         return Picture([[self._invColor(color) for color in row] for row in self.img])
 
     def join(self, p):
+        """ Devuelve una nueva figura poniendo la figura del argumento
+            al lado derecho de la figura actual """
         new_img = [list(row1) + list(row2) for row1, row2 in zip(self.img, p.img)]
         return Picture(new_img)
 
