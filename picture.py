@@ -34,7 +34,9 @@ class Picture:
         return Picture([row1 + row2 for row1, row2 in zip(self.img, p.img)])
 
     def up(self, p):
-        return Picture(None)
+        """ Devuelve una nueva figura poniendo la figura p encima de la
+            figura actual """
+        return Picture(self.img + p.img)
 
     def under(self, p):
         """ Devuelve una nueva figura poniendo la figura p sobre la
